@@ -38,6 +38,28 @@ class Book{
 
 };
 
+class Calculator{
+    public:
+        void sum(int a , int b){
+            cout << "the sum is : "<< a + b<<endl;
+        }
+        void diff(int a , int b ){
+            cout << "The diff is : "<< a-b<<endl;
+        }
+        void multiply(int a, int b);
+        void divide(int a, int b);
+};
+void Calculator::multiply(int a, int b){
+    cout << "the product is : "<< a*b<<endl;
+}
+void Calculator::divide(int a, int b){
+    if(b==0){
+        cout << "Error: Divided by 0 is not allowed !"<<endl;
+        return;
+    }
+    cout << "the division is : "<< a/b<<endl;
+}
+
 
 int main(){
     Student s1;
@@ -49,6 +71,9 @@ int main(){
     Book b1;
     b1.setData("Atomic Habits", "James Clark", 300);
     b1.getData();
+    Calculator c1;
+    c1.sum(4, 6);
+    c1.divide(1 , 0);
 
 }
 
